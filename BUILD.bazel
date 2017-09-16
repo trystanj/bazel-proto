@@ -5,13 +5,13 @@ gazelle(
     prefix = "github.com/trystanj/bazel-proto",
 )
 
-go_library(
-    name = "go_default_library",
-    srcs = ["main.go"],
-    importpath = "github.com/trystanj/bazel-proto",
-    visibility = ["//visibility:private"],
-    deps = ["@com_github_prometheus_common//log:go_default_library"],
-)
+#go_library(
+#    name = "go_default_library",
+#    srcs = ["main.go"],
+#    importpath = "github.com/trystanj/bazel-proto",
+#    visibility = ["//visibility:private"],
+#    deps = ["//proto/demo:go_default_library"],
+#)
 
 go_binary(
     name = "bazel-proto",
