@@ -2,15 +2,14 @@ load("@io_bazel_rules_go//go:def.bzl", "go_library")
 load("@io_bazel_rules_go//proto:def.bzl", "go_proto_library")
 
 proto_library(
-    name = "demo",
+    name = "demo_proto",
     srcs = ["demo.proto"],
-    deps = [],
     visibility = ["//visibility:public"],
 )
 
 go_proto_library(
     name = "go_default_library",
-    proto = ":demo",
-    deps = [],
+    proto = ":demo_proto",
     visibility = ["//visibility:public"],
+    importpath = "github.com/trystanj/bazel-proto/proto/demo",
 )
