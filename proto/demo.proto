@@ -1,0 +1,10 @@
+
+syntax = "proto3";
+
+import "google/protobuf/duration.proto";
+
+message VeryUseful {
+  string very = 1;
+  int32 useful = 2;
+  google.protobuf.Duration timing = 3;
+}
