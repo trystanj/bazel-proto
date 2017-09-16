@@ -3,12 +3,12 @@ package helper
 import (
 	"log"
 
-	"github.com/trystanj/bazel-proto/proto/demo"
+	"github.com/trystanj/bazel-proto/proto"
 )
 
 func Help() string {
-	d := &demo.Demo{very: "hi", useful: 1}
-	log.Infof("demo.very, %v", d.very)
+	d := &demo.Demo{Very: "hi", Useful: 1}
+	log.Printf("demo.Very, %v", d.Very)
 
-	return d.very
+	return d.Very
 }
