@@ -10,7 +10,7 @@ go_library(
     srcs = ["main.go"],
     importpath = "github.com/trystanj/bazel-proto",
     visibility = ["//visibility:private"],
-    deps = ["//proto/demo:go_default_library"],
+    deps = ["//helper:go_default_library"],
 )
 
 go_binary(
