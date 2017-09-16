@@ -1,0 +1,16 @@
+load("@io_bazel_rules_go//go:def.bzl", "go_binary", "go_library")
+
+go_library(
+    name = "go_default_library",
+    srcs = ["helper.go"],
+    importpath = "github.com/trystanj/bazel-proto/helper",
+    visibility = ["//visibility:private"],
+    deps = ["//proto/demo:go_default_library"],
+)
+
+go_binary(
+    name = "main",
+    importpath = "github.com/trystanj/bazel-proto/main",
+    library = ":go_default_library",
+    visibility = ["//visibility:public"],
+)
