@@ -7,7 +7,7 @@ import (
 )
 
 func Help() string {
-	d := &demo.Demo{Very: "hi", Useful: 1}
+	d := &proto.Demo{Very: "hi", Useful: 1}
 	log.Printf("demo.Very, %v", d.Very)
 
 	return d.Very

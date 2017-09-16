@@ -19,3 +19,10 @@ go_binary(
     library = ":go_default_library",
     visibility = ["//visibility:public"],
 )
+
+go_binary(
+    name = "bazel-proto",
+    importpath = "github.com/trystanj/bazel-proto",
+    library = ":go_default_library",
+    visibility = ["//visibility:public"],
+)
